@@ -1,4 +1,5 @@
-﻿using CRUD_demo_3.Model;
+﻿using CRUD_demo_3.Data;
+using CRUD_demo_3.Model;
 using CRUD_demo_3.Service;
 using Microsoft.AspNetCore.Mvc;
 
@@ -11,9 +12,17 @@ namespace CRUD_demo_3.Controllers
 
         private readonly ITeacherService _service;
 
+
         public TeacherController(ITeacherService service)
         {
             _service = service;
+        }
+
+        [HttpGet]
+        public ActionResult<List<Course>> getCourses(int id)
+        {
+            // pretend code is here
+            return null;
         }
 
         [HttpPost]
